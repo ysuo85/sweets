@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<!--
+
+Author Olivia Hoback
+
+www.olivia.nu
+
+-->
+
+<html>
+
+<head>
+
+<title>jQuery slider tutorial by Olivia Hoback</title>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<script src="http://unslider.com/unslider.min.js"></script>
+
+
+
+<style>
+
+.banner { 
+
+position: relative; 
+
+overflow: auto; 
+
+padding-bottom: 100px;
+
+}
+
+.banner li { 
+
+list-style: none; 
+
+}
+
+.banner ul li { 
+
+float: left; 
+
+}
+
+.dots{
+
+	text-align: center;
+
+}
+
+.dots li{
+
+	display: inline;
+
+	padding: 0 20px;
+
+	cursor: pointer;
+
+}
+
+.active{
+
+	text-decoration: underline;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+
+
+<body>
+
+					<div class="banner">
+
+						<ul>
+
+							<li>
+
+								<h2>Heading 1</h2>
+
+								<p>Some fine text about anything. You can also add an image element or any other content you wish to slide.</p>
+
+							</li>
+
+							<li>
+
+								<h2>Heading 2</h2>
+
+								<p>Another fine text about anything.</p>
+
+							</li>	
+
+							<li>
+
+								<h2>Heading 3</h2>
+
+								<p>The last text about anything.</p>
+
+							</li>
+
+						</ul>
+
+					</div><!--.banner-->
+
+<script>
+
+$('.banner').unslider({
+
+	speed: 500,               //  The speed to animate each slide (in milliseconds)
+
+	delay: 3000,              //  The delay between slide animations (in milliseconds)
+
+	complete: function() {},  //  A function that gets called after every slide animation
+
+	keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+
+	dots: true,               //  Display dot navigation
+
+	fluid: false              //  Support responsive design. May break non-responsive designs
+
+});
+
+</script>
+
+</body>
+
+
+
+</html>
